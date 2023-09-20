@@ -39,6 +39,8 @@ def traceroute_with_details(host):
         for hop in hop_details:
             if hop not in unique_hop:
                 unique_hop.append(hop)
+        if system == "Windows":
+            unique_hop.pop(1)
         unique_hop = list(unique_hop)
         unique_hop.insert(2, public_ip)
         return unique_hop
