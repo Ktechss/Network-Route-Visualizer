@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    scroll-behavior: smooth;
+}
+section{
+    width:100%;
+    height: auto;
+    display: inline-block;
+    background-color:transparent;
+}
+#search_bar{
+    margin-top: 30vh;
+    margin-left: 35vw;
+    margin-bottom: 2vh;
+    height: auto;
+    background-color:transparent;
+    text-align: center;
+    justify-content: center;
+    display: inline-block;
+}
+.search_bar > * {
+    margin: 2rem;
+}
+#search_bar input{
+    width: 25vw;
+    height: 4.5vh;
+    border-radius: 10vh;
+    margin-bottom: 2vh;
+    font-size: 1rem;
+    padding-left: 1rem;
+    text-transform: lowercase;
+    border-color: black;
+}
+#search_bar input::placeholder{
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+#search_bar input:focus{
+    outline: none;
+}
+#search_bar button{
+    width: 5.5vw;
+    height: 4vh;
+    margin-bottom: 1vh;
+    border-radius: 10vh;
+    border-color: transparent;
+}
+#hop_count{
+    width: inherit;
+    height: auto;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    background-color:transparent;
+    margin-bottom:5vh;
+}
+/*  Section 2 Css*/
+
+#routers_list{
+    display: flex;
+    background-color:transparent;
+    
+
+}
+#routers{
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    overflow-x: auto;
+}
+.hop{
+    width: auto;
+    height: auto;
+    margin-left: 2vh;
+    margin-bottom: 4vh;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: transparent;
+    flex: 0 0 auto; /* Allow elements to shrink or grow if necessary */
+}
+
+#router_image{
+    width: 100px ;
+    height: 100px;
+    background: url("/static/images/routers.svg");
+    background-position: center;
+    background-size:80% ;
+    background-repeat: no-repeat;
+    background-color:transparent;
+    margin-left: 5%;  
+}
+.hop p{
+    overflow-wrap: break-word;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+}
+
+/* Section 3 */
+#detailed-view{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#detailed-view .d-view{
+    width: 45vw;
+    background-color: transparent;
+    margin-bottom: 10vh;
+}
+
+
+table {
+    width: 400px;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+  
+
+  th {
+    width: 110px; 
+    word-wrap: break-word; 
+    text-align: left; 
+    border: 1px solid #ddd;
+    background-color: rgb(155, 155, 155);
+    padding: 8px;
+  }
+  
+ 
+  td {
+    width: 110px; 
+    word-wrap: break-word;
+    text-align: left; 
+    border: 1px solid #ddd; 
+    padding: 8px; 
+  }

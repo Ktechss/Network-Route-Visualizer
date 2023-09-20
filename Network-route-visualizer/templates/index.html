@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Network Monitor</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANwBUzvHslFTT7iOmoiBlU-BQbcTOaTrc&callback=initMap" async defer></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <section id="input_section">
+        <div id="search_bar" class="search_bar">
+            <h1>Network Monitor</h1>
+            <form method="post">
+                <br>
+                <input type="text" id="host" name="host" placeholder="Enter host name" required>
+                <br>
+                <button type="submit">Ping</button>
+            </form>
+            <div id="hop_count" class="hop_count">
+                {% if hop_details %}
+                <h2>Number of hops: {{ hop_details|length }}</h2>
+                <br>
+                <a href="#routers_list"><button id="viewq" onclick="collect_hop_list()" >view</button></a>
+                <div id="hop_IPs" style="visibility: hidden;">
+                    <ul>
+                        {% for hop in hop_details %}
+                        <li>{{ hop }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        
+    </section>
+    <section id="routers_list">
+        <div id="routers">
+        </div>
+    </section>
+    <section id="detailed-view">
+        <div id="detialed-table" class="d-view"></div>
+        <div id="global-map" class="d-view"></div>
+    </section>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+
+
+</body>
+</html>
