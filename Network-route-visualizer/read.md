@@ -1,5 +1,5 @@
 Hello folks,
-This project is made to visualise the intermedate routers and hops
+This project is made to visualise the intermediate routers and hops
 through which your request or packet is moving forward towards the server.
 
 In addition of that you can see the world wide map form where the request is moving to which destination
